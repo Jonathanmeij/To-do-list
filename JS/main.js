@@ -1,4 +1,5 @@
 const inputButton = document.getElementById('inputButton')
+const inputField = document.getElementById('taskInput')
 var listArray = []
 
 function listItemOBJ(content){
@@ -6,12 +7,13 @@ function listItemOBJ(content){
 } 
 
 inputButton.onclick = () => {
-    const content = document.getElementById('taskInput').value
+    const content = inputField.value
     if(content == ''){
         console.log('leeg')
         return
     }
     addToList(content)
+    inputField.value = ''
 }
 
 function createTaskDom(content){
@@ -44,12 +46,14 @@ function addToList(content){
 }
 
 function removeFromList(content) {
-    listArray.forEach((item, index) => {
-        if(item.content == content) {
-            listArray.splice(index)
+    for (let i = 0; i < listArray.length; i++) {
+        if(listArray[i].content == content) {
+            listArray.splice(i, 1)
+            refreshLocal()
+            break
         }
-    })
-    refreshLocal()
+        
+    }
 }
 
 function refreshLocal(){
