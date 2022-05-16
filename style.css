@@ -1,0 +1,84 @@
+body{
+    background-color: rgb(214, 229, 230);
+    font-family: 'Roboto Mono', monospace;
+}
+
+.inputContainer {
+    max-width: 500px;
+    margin: auto;
+    background-color: rgb(154, 172, 172);
+    display: grid;
+    padding: 10px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+h1 {
+    margin: auto;
+    padding-bottom: 10px;
+    font-weight: 600;
+}
+
+#taskInput {
+    font-size: 1rem;
+    border-style: hidden;
+    height: 30px;
+    width: 100%;
+    padding-left: 5px;
+}
+
+#taskInput:focus {
+    outline: none;
+}
+
+.form {
+    margin: auto;
+    display: flex;
+    width: 80%;
+}
+
+#inputButton {
+    width: 30px;
+    height: 32px;
+    border-style: hidden;
+    background-color: rgb(33, 88, 90);
+    color: white;
+    font-weight: 900;
+    font-size: 1.3rem;
+}
+
+#inputButton:hover {
+    background-color: rgb(43, 110, 112);
+}
+
+.task {
+    padding: 5px;
+    max-width: 500px;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    background-color: white;
+    display: flex;
+}
+
+.taskText {
+    width: 90%;
+    overflow-wrap: break-word;
+}
+
+.taskButton {
+    margin-top:auto;
+    margin-bottom:auto;
+    margin-left: auto;
+    width: 30px;
+    height: 30px;
+    border-style: hidden;
+    background-color: rgb(199, 45, 45);
+    color: white;
+    font-weight: 900;
+    font-size: 1.3rem;
+}
+
+.taskButton:hover {
+    background-color: rgb(228, 55, 55);
+}
